@@ -10,12 +10,11 @@ services:
     ports:
       - 80:80
     networks:
-      - network
+      - nginx_network
 
 networks:
-  network:
-    external:
-      name: nginx_network
+  nginx_network:
+    external: true
 
 volumes:
   static-data-nginx:
